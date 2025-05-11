@@ -24,7 +24,7 @@ const CodeEditor = ({
   };
 
   return (
-    <div className="h-full w-full editor-container overflow-hidden border border-border">
+    <div className="h-full w-full editor-container rounded-md overflow-hidden border border-border">
       <Editor
         height={height}
         language={language}
@@ -41,6 +41,14 @@ const CodeEditor = ({
           renderLineHighlight: "all",
           padding: { top: 16, bottom: 16 },
           automaticLayout: true,
+          scrollbar: {
+            vertical: 'visible',
+            horizontal: 'visible',
+            verticalHasArrows: true,
+            horizontalHasArrows: true,
+            verticalScrollbarSize: 12,
+            horizontalScrollbarSize: 12
+          }
         }}
         onMount={handleEditorDidMount}
       />
